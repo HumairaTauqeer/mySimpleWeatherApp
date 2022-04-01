@@ -1,0 +1,184 @@
+:root {
+    --bg_main: #373A40;
+    --text-white: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #FE346E;
+    --darkred: #B80D57;
+    --orange: #ff8c00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg_main);
+    width: 100%;
+    font-family: Ubuntu, sans-serif;
+}
+
+.banner {
+    width: 80%;
+    margin: auto;
+    color: var(--text-white);
+    margin-top: 3rem;
+}
+
+.heading {
+    font-family: Ubuntu;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+input {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+}
+
+form input {
+    border-bottom: 1px solid var(--text-white);
+    margin-right: 3rem;
+    font-size: 1.5rem;
+}
+
+form input::placeholder {
+    color: var(--text-white);
+}
+
+.container-center {
+    text-align: center;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: .5rem .7rem;
+    background-color: var(--darkred);
+    border: none;
+    border-radius: .5rem;
+    color: var(--text-white);
+}
+
+button:hover {
+    background-color: var(--red);
+    transition: 0.4s ease-in-out;
+}
+
+.banner form .error-message {
+    /* display: none; */
+    position: relative;
+    margin-right: 30%;
+    margin-bottom: .7rem;
+}
+
+@media screen and (max-width: 700px) {
+    .banner form {
+        flex-direction: column;
+    }
+    .banner form input,
+    .banner form button {
+        width: 100%;
+    }
+    .banner form button {
+        margin: 20px 0 0 0;
+    }
+    .banner form .error-message {
+        position: relative;
+        margin-right: 37%;
+    }
+    button {
+        margin-top: 2rem !important;
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    .banner form .error-message {
+        position: relative;
+        margin-right: 21%;
+    }
+}
+
+
+/* display section */
+
+ul {
+    list-style-type: none;
+}
+
+.display-weather {
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.display-weather .cities {
+    display: grid;
+    grid-gap: 2rem 1.3rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1000px) {
+    .display-weather .cities {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .display-weather .cities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .display-weather .cities {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.display-weather .city {
+    position: relative;
+    padding: 2.5rem 10%;
+    border-radius: 1.5rem;
+    background: var(--text_med);
+    color: var(--text-white);
+}
+
+.display-weather figcaption {
+    margin-top: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem
+}
+
+.display-weather .city-temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--text-white);
+}
+
+.display-weather .city-temperature sup {
+    font-size: 2rem;
+}
+
+.display-weather .city-name sup {
+    padding: 0.2rem 0.4rem;
+    border-radius: 10px;
+    color: var(--text-white);
+    background: var(--orange);
+    font-size: .7rem;
+}
+
+.display-weather .city-icon {
+    margin-top: 1rem;
+    width: 5rem;
+    height: 6rem;
+}
