@@ -1,11 +1,9 @@
 :root {
-    --bg_main: #373A40;
-    --text-white: #fff;
-    --text_med: #53627c;
-    --text_dark: #1e2432;
-    --red: #FE346E;
-    --darkred: #B80D57;
-    --orange: #ff8c00;
+    --backgroundColor: #373A40;
+    --white: #fff;
+    --card-color: #53627c;
+    --pink: #FE346E;
+    --darkPink: #B80D57;
 }
 
 * {
@@ -16,7 +14,7 @@
 }
 
 body {
-    background-color: var(--bg_main);
+    background-color: var(--backgroundColor);
     width: 100%;
     font-family: Ubuntu, sans-serif;
 }
@@ -24,7 +22,7 @@ body {
 .banner {
     width: 80%;
     margin: auto;
-    color: var(--text-white);
+    color: var(--white);
     margin-top: 3rem;
 }
 
@@ -43,13 +41,13 @@ input {
 }
 
 form input {
-    border-bottom: 1px solid var(--text-white);
+    border-bottom: 1px solid var(--white);
     margin-right: 3rem;
     font-size: 1.5rem;
 }
 
 form input::placeholder {
-    color: var(--text-white);
+    color: var(--white);
 }
 
 .container-center {
@@ -59,22 +57,24 @@ form input::placeholder {
 button {
     font-size: 1.5rem;
     padding: .5rem .7rem;
-    background-color: var(--darkred);
+    background-color: var(--darkPink);
     border: none;
     border-radius: .5rem;
-    color: var(--text-white);
+    color: var(--white);
 }
 
 button:hover {
-    background-color: var(--red);
+    background-color: var(--pink);
     transition: 0.4s ease-in-out;
 }
 
 .banner form .error-message {
-    /* display: none; */
+    display: none;
     position: relative;
     margin-right: 30%;
     margin-bottom: .7rem;
+    color: var(--darkPink);
+    font-weight: 800;
 }
 
 @media screen and (max-width: 700px) {
@@ -148,8 +148,8 @@ ul {
     position: relative;
     padding: 2.5rem 10%;
     border-radius: 1.5rem;
-    background: var(--text_med);
-    color: var(--text-white);
+    background: var(--card-color);
+    color: var(--white);
 }
 
 .display-weather figcaption {
@@ -162,7 +162,7 @@ ul {
     font-size: 3rem;
     font-weight: bold;
     margin-top: 1rem;
-    color: var(--text-white);
+    color: var(--white);
 }
 
 .display-weather .city-temperature sup {
@@ -172,8 +172,8 @@ ul {
 .display-weather .city-name sup {
     padding: 0.2rem 0.4rem;
     border-radius: 10px;
-    color: var(--text-white);
-    background: var(--orange);
+    color: var(--white);
+    background: var(--pink);
     font-size: .7rem;
 }
 
@@ -181,4 +181,5 @@ ul {
     margin-top: 1rem;
     width: 5rem;
     height: 6rem;
+    color: #B80D57 !important;
 }
